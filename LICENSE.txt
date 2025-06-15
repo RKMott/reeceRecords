@@ -1,4 +1,4 @@
-Copyright Reece K. Mott 2025
+Copyright Reece K. Mott, Adam Azarousal, Hamad Hassan, Jake Howells, Marius Codescu 2025
 
 All rights reserved.
 
