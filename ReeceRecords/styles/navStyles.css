@@ -1,0 +1,259 @@
+@charset "utf-8";
+/* CSS Document */
+
+.mainNavContainer {
+	width: 100vw;
+	height: max-conntent;
+	background-color: rgba(17,17,17,1.00);
+}
+
+/** Sets up sets up large screen nav layout in grid**/
+
+.navGrid {
+	background-color: rgba(17,17,17,1.00);
+	width: 100vw;
+	max-width: 2000px;
+	margin: auto;
+	display: grid;
+	grid-template: 
+		"account home services logo about contact cart";
+	grid-template-columns: 1.5fr 2fr 2fr 3fr 2fr 2fr 1.5fr;
+	grid-template-rows: 150px;
+	grid-gap: 20px;
+	font-size: 1.8rem;
+	font-family: "futura-pt-bold", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+/** Aligns text within nav, home, services etc etc **/
+
+.navTxt {
+	align-self: center;
+	margin: auto;
+}
+
+/** Set up text styling within large nav **/
+
+.navTxt a {
+	align-self: center;
+	margin: auto;
+	text-decoration: none;
+	color: white;
+}
+
+/** Text hover effects **/
+
+.navTxt a:hover {
+	color: rgba(221,181,127,1.00);
+}
+
+/** Text active state effects **/
+
+.navTxt a:active {
+	color: rgba(135,99,57,1.00);
+}
+
+/** Assigning grid area and sizing to account icon **/
+
+.accountIcon {
+	grid-area: account;
+	width: 55px;
+	margin: 25px 25%;
+}
+
+/** assigns grid area **/
+
+.navHome {
+	grid-area: home;
+}
+
+/** assigns grid area **/
+
+.navServices {
+	grid-area: services;
+}
+
+/** Assigns grid area and sizing to logo **/
+
+.navLogo {
+	grid-area: logo;
+	height: 100%;
+	margin: auto;
+}
+
+/** assigns grid area **/
+
+.navAbout {
+	grid-area: about;
+}
+
+/** assigns grid area **/
+
+.navContact {
+	grid-area: contact;
+}
+
+/** assigns grid area and sizing to cart icon **/
+
+.cartIcon {
+	grid-area: cart;
+	width: 55px;
+	float: right;
+	margin: 25px 25% 0 0;
+}
+
+/** hides small nav contents **/
+
+.navMobile {
+	display: none;
+}
+
+.aside {
+	display: none;
+}
+
+/** Sets up media query for smaller scren size **/
+
+@media (max-width: 1024px) {
+
+/** Hides larger nav screen **/
+	
+	.navGrid {
+		display: none;
+	}
+	
+/** Sets up base for small screen nav and grid layout **/	
+
+	.navMobile {
+		width: 100%;
+		height: 100px;
+		background-color: rgba(17,17,17,1.00);
+		display: grid;
+		grid-template: 
+			"menuIcon logo cart";
+		grid-template-columns: 2fr 3fr 2fr;
+		grid-template-rows: 100px;
+		position: fixed;
+		z-index: 9999;
+		translate: 0% -100px;
+	}
+	
+/** Applys styling to logo within small nav and grid cell **/
+	
+	.smallNavLogo {
+		grid-area: logo;
+		height: 95%;
+		margin: auto;
+	}
+
+/** Assigns grid cell and sets up cart icon **/
+
+	.smallCartIcon {
+		grid-area: cart;
+		height: 45px;
+		justify-self: end;
+		margin: 15px 20px 0 0;
+		float: right;
+	}
+	
+/** Sets up root setting for hamburger styling and animation **/
+/** Note: settings within here can be changed to alter icon **/
+	
+	:root {
+		--icon-width: 35px;
+		--icon-height: 7px;
+		--hamburger-color: white;
+		--animation-timing: 200ms ease-in-out;
+	}
+	
+	.burgerGroup {
+		grid-area: menuIcon;
+		display: flex;
+		flex-flow: column;
+		margin: 20px 0 0 15px;
+	}
+	
+/** Setting up default icon look **/
+	
+	.hamburgerIcon {
+		appearance: none;
+		background-color: var(--hamburger-color);
+		width: var(--icon-width);
+		height: var(--icon-height);
+		border-radius: 9999px;
+		margin-top: 5px;
+		margin-left: 10px;
+		transition: opacity var(--animation-timing), translate var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), border var(--animation-timing);
+		cursor: pointer;
+	}
+	
+/** Setting up active state location **/
+	
+	.first:checked {
+		rotate: 45deg;
+		translate: 0 12.75px;
+		z-index: 2;
+		border: 2px solid rgba(17,17,17,1.00);
+	}
+	
+/** Setting up active state location **/
+	
+	.second:checked {
+		opacity: 0;
+		width: 0;
+	}
+	
+/** Setting up active state location **/
+	
+	.third:checked {
+		rotate: -45deg;
+		translate: 0 -11.25px;
+		border: 2px solid rgba(17,17,17,1.00);
+	}
+	
+/** Setting side bar styling **/
+	
+	.aside {
+		display: grid;
+		background-color: rgba(50,50,50,0.70);
+		font-family: "futura-pt-bold", sans-serif;
+		font-weight: 700;
+		font-style: normal;
+		height: 100vh;
+		width: max-content;
+		translate: -100% -15%;
+		transition: translate var(--animation-timing);
+		position: fixed;
+		margin-top: 125px;
+	}
+	
+	.aside ul li {
+		margin: 10px 20px 20px 20px;
+		list-style: none;
+	}
+	
+	.aside ul li a {
+		color: white;
+		text-decoration: none;
+		font-size: 2rem;
+	}
+	
+	.aside ul li a:hover {
+		color: rgba(221,181,127,1.00);
+	}
+	
+	.aside ul li a:active {
+		color: rgba(135,99,57,1.00);
+	}
+	
+	body {
+	padding-top: 100px;
+}
+	
+}
+
+
+
+
+

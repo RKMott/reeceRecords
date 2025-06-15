@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/png" href="images/nav/rrLogoNonTxt.png">
+		<title>Reece Records - Services 📀</title>
+		<link rel="stylesheet" href="styles/navStyles.css">
+		<link rel="stylesheet" href="https://use.typekit.net/yzi7ixs.css">
+		<link rel="stylesheet" href="styles/HeaderStyles.css">
+		<link rel="stylesheet" href="styles/masterStyles.css">
+		<link rel="stylesheet" href="styles/servicesBodyStyling.css">
+		<link rel="stylesheet" href="styles/footerStyles.css">
+		<link rel="stylesheet" href="styles/popUpStyle.css">
+		<script src="js/popUp.js"></script>
+		<script src="js/navJS.js"></script>
+		<script src="js/servicesExpandJS.js"></script>
+		<script src="js/cartFunction.js"></script>
+	</head>
+
+	<nav class="navMaster"> <!-- master nav, contains large and small nav -->
+		<div class="navMobile"> <!-- Small mobile nav -->
+			<div class="burgerGroup">
+				<input class="hamburgerIcon first" type="checkbox">
+				<input class="hamburgerIcon second" type="checkbox">
+				<input class="hamburgerIcon third" type="checkbox">
+			</div>
+			
+			<img class="smallNavLogo" src="images/nav/rrLogoNonTxt.png" alt="Reece Records Logo">
+			
+			<a href="cart.html"><img class="smallCartIcon" src="images/nav/white shopping cart.png" alt="Shopping cart icon"></a>
+		</div>
+		
+		<div class="aside"> <!-- sidebar for smaller nav when clicked -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contant</a></li>
+				<li><a onClick="popUpOpen()" href="#">Account</a></li>
+			</ul>
+		</div>
+		
+		<div class="mainNavContainer">
+			<nav class="navGrid"> <!-- large screen nav -->
+				<a onClick="popUpOpen()" href="#"><img class="accountIcon" src="images/nav/white account icon.png" alt="Account Icon"></a>
+				<h3 class="navHome navTxt"><a href="index.html">Home</a></h3>
+				<h3 class="navServices navTxt"><a href="services.html">Services</a></h3>
+				<img class="navLogo" src="images/nav/rrLogoNonTxt.png" alt="Reece Records Logo">
+				<h3 class="navAbout navTxt"><a href="about.html">About</a></h3>
+				<h3 class="navContact navTxt"><a href="contact.html">Contact</a></h3>
+				<a href="cart.html"><img class="cartIcon" src="images/nav/white shopping cart.png" alt="Shopping cart icon"></a>
+			</nav>
+		</div>
+	</nav>
+		
+	<body>
+		<header class="header">
+			<h1 class="headerTitle">Services</h1>
+		</header>
+		
+		<section class="services">
+			<div class="recordingCon containerDefault" id="recordingContainer">
+				<img class="containerFigDefaults" src="images/service/recordingFig.jpg" alt="Image of a drum kit, representing the recording process.">
+				
+				<article class="serviceContainerTxt">
+					<h3 class="serviceContainerTitleDefaults">Recording</h3>
+				
+					<p>From solo artists to full live bands, we capture your sound in a professional studio.</p>
+					<br>
+					<p>Write, arrange and record instruments and vocals with high-quality equipment for the perfect take.</p>
+					<br>
+					<div id="recordingPara" class="expandable">
+						<p>Included:</p>
+						<ul>
+							<li>> One 8 hour pre production session</li>
+							<li>> Day recording session (8 hours)</li>
+							<li>> Raw audio files from recording session</li>
+						</ul>
+						<br>
+						<p><span class="priceTxtStyle">Price:</span> £270 /Day</p>
+					</div>
+				</article>
+				
+				<button id="recordingReadMore">Read More</button>
+				
+				<a onClick="addToCart(1, 'Recording', 270)" href=""><div class="addToBasket">
+					<p>Add To Basket</p>
+					<img class="addToBasketIcon" src="images/service/shoppingcart.png" alt="Shopping cart icon">
+				</div></a>
+			</div>
+			
+			<div class="mixingCon containerDefault" id="mixingContainer">
+				<img class="containerFigDefaults" src="images/service/mixingFig.jpg" alt="Image of Logic Pro on a laptop, representing the mixing process.">
+				
+				<article class="serviceContainerTxt">
+					<h3 class="serviceContainerTitleDefaults">Mixing</h3>
+				
+					<p>Evelate your music with professional mixing - balance intstruments, refine tones, enhance clarity and create depth.</p>
+					<br>
+					<p>Expert engineers craft a polished, dynamic sound, ensuring every element sits perfectly in the mix for a professional, radio ready finish.</p>
+					<br>
+					<div id="mixingPara" class="expandable">
+						<p>Included</p>
+						<p>One track professionally mixed by our in house team to your specification, ready to take home or be sent off for mastering.</p>
+						<br>
+						<p><span class="priceTxtStyle">Price:</span> £100 /Song</p>
+					</div>
+				</article>
+				
+				<button id="mixingReadMore">Read More</button>
+				
+				<a onclick="addToCart(2, 'Mixing', 100)" href=""><div class="addToBasket">
+					<p>Add To Basket</p>
+					<img class="addToBasketIcon" src="images/service/shoppingcart.png" alt="Shopping cart icon">
+				</div></a>
+			</div>
+			
+			<div class="masteringCon containerDefault" id="masteringContainer">
+				<img class="containerFigDefaults" src="images/service/masteringFig.jpg" alt="Image of Pro Tools on a computer screen, representing the mastering process">
+				
+				<article class="serviceContainerTxt">
+					<h3 class="serviceContainerTitleDefaults">Mastering</h3>
+				
+					<p>Perfect your final track with professional mastering and ensure consistency across all playback systems.</p>
+					<br>
+					<p>With precise EQ, compression and stero enhancement, we give your music the polished, insutry-standard sound it deserves.</p>
+					<br>
+					<div id="masteringPara" class="expandable">
+						<p>Included</p>
+						<p>One track professionally master for as many platforms as needed.</p>
+						<p>e.g. Digital streaming platforms (spotify), Vinyl, CD, etc...</p>
+						<br>
+						<p><span class="priceTxtStyle">Price:</span> £30 /Song</p>
+					</div>
+				</article>
+				
+				<button id="masteringReadMore">Read More</button>
+				
+				
+				<a onclick="addToCart(3, 'Mastering', 30)" href=""><div class="addToBasket">
+					<p>Add To Basket</p>
+					<img class="addToBasketIcon" src="images/service/shoppingcart.png" alt="Shopping cart icon">
+				</div></a>
+			</div>
+			
+		</section>
+		
+		<footer class="footer">
+        <div class="footerGrid">
+            <div class="footerLogo">
+                <img src="images/nav/rrLogoNonTxt.png" alt="Reece Records Logo">
+            </div>
+            <div class="footerLinks">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footerContact">
+                <h4>Contact Us</h4>
+                <p>Email: reece.records.studio@gmail.com</p>
+                <p>Phone: (+44) 0123-4567</p>
+                <p>Address: Cauldwell St, Bedford MK42 9AH</p>
+            </div>
+            <div class="footerSocial">
+                <h4>Follow Us</h4>
+                <div class="socialLinks">
+                    <a href="https://www.youtube.com/@ReeceRecords">Youtube</a>
+                    <a href="https://www.instagram.com/reecerecordsbedford/">Instagram</a>
+                    <a href="https://www.tiktok.com/@reecerecords_bedford?lang=en-GB">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footerBottom">
+            <p>&copy; 2024 Reece Records. All rights reserved.</p>
+        </div>
+    </footer>
+		
+	<div class="popUp" id="popUpOpen">
+		<h3>FEATURE NOT YET AVAILABLE</h3>
+		<p>This Feature is not yet available, to be added soon.</p>
+		<br> <br> <br>
+		<button onClick="popUpClose()">Close</button>
+	</div>
+	</body>
+</html>
+
+
+
+
+
+
+

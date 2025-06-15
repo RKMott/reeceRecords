@@ -1,0 +1,157 @@
+@charset "utf-8";
+/* CSS Document */
+
+ :root {
+      --section-padding: 48px 0 32px 0;
+	  --dark-bg: rgba(17,17,17,1.00);
+	  --brand-color: rgba(132,97,56,1.00);
+    }
+
+    /* Video Trailer */
+    .video-trailer-container {
+      width: 100vw;
+      max-width: 100%;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+    }
+
+    .video-trailer {
+      width: 100vw;
+      height: 55vw;
+      max-height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Overlay for brand color tint */
+    .video-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(90deg, rgba(221, 181, 127, 0.25) 0%, rgba(0, 0, 0, 0.2) 100%);
+      pointer-events: none;
+    }
+
+    /* Sections */
+    .main-content {
+      background: var(--light-bg);
+      border-radius: 0 0 24px 24px;
+      margin: -32px auto 0 auto;
+      max-width: 1200px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+      padding: 32px 24px 48px 24px;
+    }
+
+    .section {
+      padding: var(--section-padding);
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .section:last-child {
+      border-bottom: none;
+    }
+
+    .section-title {
+      color: var(--brand-color);
+      font-size: 2rem;
+      margin-bottom: 16px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .spotify-embed {
+      width: 100%;
+      height: 80px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 16px;
+    }
+
+    .events-list,
+    .offers-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .tc {
+      align-self: flex-end;
+    }
+
+    .event-card,
+    .offer-card {
+      background:rgba(17,17,17, 0.9);
+      border-radius: 12px;
+      border: 2px solid rgba(221,181,127,1);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      padding: 18px 22px;
+      min-width: 220px;
+      flex: 1 1 220px;
+      color: #fff;
+    }
+
+    .event-image {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    .industry-overview {
+      font-size: 1.07rem;
+      line-height: 1.7;
+      color: #fff;
+    }
+	
+    /* Responsive */
+    @media (max-width: 700px) {
+      .main-content {
+        padding: 16px 4vw 32px 4vw;
+      }
+
+      .section-title {
+        font-size: 1.35rem;
+      }
+
+      .events-list,
+      .offers-list {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .event-card,
+      .offer-card {
+        min-width: unset;
+      }
+
+    }
+
+    .read-more-button {
+      text-align: center;
+      margin-top: 24px;
+    }
+    .offer-terms {
+      font-size: 0.72em;
+      color: #666;
+      margin-top: 6px;
+      display: block;
+    }
+
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--brand-color);
+      color: var(--dark-bg);
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+    }

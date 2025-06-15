@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(17,17,17,1.00);
+    padding: 50px 0 20px 0;
+    margin-top: 50px;
+}
+
+.footerGrid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footerLogo img {
+    width: 120px;
+}
+
+.footerLinks h4, .footerContact h4, .footerSocial h4 {
+    color: rgba(221,181,127,1.00);
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footerLinks ul {
+    list-style: none;
+}
+
+.footerLinks ul li, .footerContact p {
+    margin-bottom: 10px;
+}
+
+.footerLinks a, .socialLinks a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerLinks a:hover, .socialLinks a:hover {
+    color: rgba(221,181,127,1.00);
+}
+
+.socialLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footerBottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+@media (max-width: 650px) {
+    .footerGrid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+	
+	.footerLogo, .footerLinks, .footerContact, .footerSocial {
+		margin: auto;
+	}
+	
+	.footerContact h4 {
+		justify-self: center;
+	}
+}

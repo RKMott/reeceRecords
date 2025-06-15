@@ -1,0 +1,91 @@
+@charset "utf-8";
+
+h1 {
+  color: white;
+  padding-top: 10px;
+  font-size: 60px;
+}
+h2 {
+  color: white;
+  padding-top: 10px;
+  font-size: 30px;
+}
+.formInput {
+  background-color: Black;
+  width: 70%;
+  margin-left: 12%;
+  font-size: 20px;
+  padding: 16px 16px;
+  border-radius: 10px;
+  border-color: black;
+  margin-bottom: 20px;
+}
+textarea {
+  background-color: black;h1 {
+  color: white;
+  padding-top: 10px;
+  font-size: 60px;
+}
+  width: 70%;
+  margin-left: 12%;
+  font-size: 20px;
+  padding: 16px 16px;
+  border-radius: 10px;
+  border-color: black;
+  margin-bottom: 25px;
+}
+
+input focus-within {
+  border-color: black;
+  outline: none;
+  border-width: 2px;
+}
+
+textarea:focus-within {
+  border-color: black;
+  outline: none;
+  border-width: 2px;
+}
+
+button {
+  background-color: black;
+  border-radius: 20px;
+  border-color: black;
+  font-size: 22px;
+  padding: 10px 20px;
+  text-align: center;
+  display: flex;
+  margin: auto;
+}
+
+button:hover{
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.Instalogo{
+  width: 100px;
+  height: 100px;
+  margin: auto
+}
+
+.Tiklogo{
+  width: 100px;
+  height: 100px;
+  margin: auto
+}
+
+.Youlogo{
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.socialIcons {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 0 30%;
+}
+
+

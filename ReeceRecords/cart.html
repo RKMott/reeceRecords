@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="images/nav/rrLogoNonTxt.png">
+  <title>Reece Records - Cart 📀</title>
+  <link rel="stylesheet" href="styles/navStyles.css">
+  <link rel="stylesheet" href="https://use.typekit.net/yzi7ixs.css">
+  <link rel="stylesheet" href="styles/masterStyles.css">
+  <link rel="stylesheet" href="styles/HeaderStyles.css">
+  <link rel="stylesheet" href="styles/cartStyle.css">
+	<link rel="stylesheet" href="styles/popUpStyle.css">
+	<script src="js/popUp.js"></script>
+  <script src="js/navJS.js"></script>
+  <script src="js/cartFunction.js"></script>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navMaster">
+        <div class="navMobile">
+            <div class="burgerGroup">
+                <input class="hamburgerIcon first" type="checkbox">
+                <input class="hamburgerIcon second" type="checkbox">
+                <input class="hamburgerIcon third" type="checkbox">
+            </div>
+            <img class="smallNavLogo" src="images/nav/rrLogoNonTxt.png" alt="Reece Records Logo">
+            <a href="cart.html"><img class="smallCartIcon" src="images/nav/white shopping cart.png"
+                    alt="Shopping cart icon"></a>
+        </div>
+        <div class="aside">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a onClick="popUpOpen()" href="#">Account</a></li>
+            </ul>
+        </div>
+        <div class="mainNavContainer">
+            <nav class="navGrid">
+                <a onClick="popUpOpen()" href="#"><img class="accountIcon" src="images/nav/white account icon.png" alt="Account Icon"></a>
+                <h3 class="navHome navTxt"><a href="index.html">Home</a></h3>
+                <h3 class="navServices navTxt"><a href="services.html">Services</a></h3>
+                <img class="navLogo" src="images/nav/rrLogoNonTxt.png" alt="Reece Records Logo">
+                <h3 class="navAbout navTxt"><a href="about.html">About</a></h3>
+                <h3 class="navContact navTxt"><a href="contact.html">Contact</a></h3>
+                <a href="cart.html"><img class="cartIcon" src="images/nav/white shopping cart.png" alt="Shopping cart icon"></a>
+            </nav>
+        </div>
+    </nav>
+
+<!-- Booking Form -->
+<main class="mainContent">
+  <div class="cartBox">
+	<h1>Your Cart</h1>
+    <div id="cart"></div>
+  </div>
+  <section class="paymentSection">
+    <h2>Studio Booking Form</h2>
+
+    <form class="studioForm" action="php/process_order.php" method="POST" onSubmit="return submitCartData(this)">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="full_name" placeholder="Full Name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+      <div class="cardInfoHeader">
+        <h3>Card Info</h3>
+        <div class="acceptedCards">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="Mastercard">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+        </div>
+      </div>
+
+      <input type="text" name="cardholder_name" placeholder="Cardholder Name" required>
+      <input type="text" name="card_number" placeholder="Card Number" required>
+      <input type="text" name="expiry_date" placeholder="MM/YY" required>
+      <input type="text" name="cvv" placeholder="CVV" required>
+		
+	  <input type="hidden" name="cart_data" id="cart_data">
+      <button type="submit">Confirm Booking</button>
+
+    </form>
+
+  </section>
+</main>
+
+	<div class="popUp" id="popUpOpen">
+		<h3>FEATURE NOT YET AVAILABLE</h3>
+		<p>This Feature is not yet available, to be added soon.</p>
+		<br> <br> <br>
+		<button onClick="popUpClose()">Close</button>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,105 @@
+    .mainContent {
+      padding: 20px;
+      min-height: 100vh;
+    }
+    .paymentSection {
+      max-width: 45%;
+      margin: 0 auto;
+      background: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      border: 1px solid rgba(221,181,127,1.00);
+    }
+    .paymentSection h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .studioForm label {
+      display: block;
+      margin-top: 10px;
+    }
+    .studioForm input[type="text"],
+    .studioForm input[type="email"],
+    .studioForm input[type="number"],
+    .studioForm select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid rgba(221,181,127,1.00);
+      border-radius: 5px;
+      background-color: black;
+      color: rgba(221,181,127,1.00);
+    }
+    .cardInfoHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .acceptedCards img {
+      height: 24px;
+      margin-left: 8px;
+    }
+    .totalDisplay {
+      margin-top: 15px;
+      background-color: rgba(221,181,127,1.00);
+      padding: 10px;
+      border-radius: 5px;
+      color: black;
+      font-weight: bold;
+    }
+    .studioForm button {
+      width: 100%;
+      margin-top: 15px;
+      padding: 12px;
+      background-color: rgba(221,181,127,1.00);
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    .studioForm button:hover {
+      background-color: #cfa969;
+    }
+    #confirmMsg {
+      display: none;
+      color: limegreen;
+      text-align: center;
+      margin-top: 15px;
+    }
+    #errorMsg {
+      display: none;
+      color: red;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+.cartBox {
+	max-width: 45%;
+      margin: 10px auto;
+      background: black;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      border: 1px solid rgba(221,181,127,1.00);
+}
+
+.cartBox button {
+	width: 100px;
+	height: 30px;
+      margin-top: 15px;
+      background-color: rgba(221,181,127,1.00);
+      color: black;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+}
+
+.cartBox button:hover {
+	background-color: #cfa969;
+}
