@@ -14,7 +14,7 @@ This is a fictional website project created for educational purposes as part of 
 
 <pre>
   ```
-ReeceRecords_website/
+ReeceRecords/
 ├── index.html
 ├── about.html
 ├── services.html
